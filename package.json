@@ -1,0 +1,20 @@
+{
+    "name": "lang",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "./node_modules/.bin/babel src --out-dir dist",
+        "buildwatch": "./node_modules/.bin/babel src --out-dir dist -w",
+        "jpy": "./node_modules/.bin/babel build_jpy --out-dir build"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@babel/cli": "^7.12.1",
+        "@babel/core": "^7.12.3",
+        "@babel/preset-env": "^7.12.1"
+    }
+}
