@@ -7,7 +7,8 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "build": "./node_modules/.bin/babel src --out-dir dist",
         "buildwatch": "./node_modules/.bin/babel src --out-dir dist -w",
-        "jpy": "./node_modules/.bin/babel build_jpy --out-dir build"
+        "yuba": "./node_modules/.bin/babel build_yuba --out-dir build",
+        "start": "npm run build && npm run yuba && node build_yuba/build.js"
     },
     "keywords": [],
     "author": "",
