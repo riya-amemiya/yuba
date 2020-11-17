@@ -59,26 +59,18 @@ for (var _i in inp) {
 console.log(out);
 out = out.replace(/\n/g, '');
 
-if (check('build_yuba')) {
-  _fs["default"].writeFile('build_yuba/build.js', out, function (err) {
-    if (err) {
-      throw err;
-    }
-
-    console.log('build_yuba/build.jsが作成されました');
-  });
-} else {
+if (!check('build_yuba')) {
   _fs["default"].mkdir('build_yuba', function (err) {
     if (err) {
       throw err;
     }
-
-    _fs["default"].writeFile('build_yuba/build.js', out, function (err) {
-      if (err) {
-        throw err;
-      }
-
-      console.log('build_yuba/build.jsが作成されました');
-    });
   });
 }
+
+_fs["default"].writeFile('build_yuba/build.js', out, function (err) {
+  if (err) {
+    throw err;
+  }
+
+  console.log('build_yuba/build.jsが作成されました');
+});

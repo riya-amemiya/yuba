@@ -8,7 +8,7 @@
         "build": "./node_modules/.bin/babel src --out-dir dist",
         "buildwatch": "./node_modules/.bin/babel src --out-dir dist -w",
         "yuba": "./node_modules/.bin/babel build_yuba --out-dir build",
-        "start": "npm run build && npm run yuba && node build_yuba/build.js"
+        "start": "npm run build && node dist/index.js && npm run yuba && node build_yuba/build.js"
     },
     "keywords": [],
     "author": "",
